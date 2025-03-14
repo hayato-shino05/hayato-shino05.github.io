@@ -1,1 +1,0 @@
-# hayato-shino05.github.io
