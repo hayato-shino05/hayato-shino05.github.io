@@ -2,7 +2,7 @@ import type { Portfolio } from "@/types";
 
 export const portfolioConfig: Portfolio = {
   name: "Shinomura Hayato",
-  tagline: "Crafting elegant, high-performance, and user-centric applications 🚀",
+  tagline: "Passionate programming student exploring new technologies 🚀",
   resume: "/cv",
   links: {
     github: "https://github.com/hayato-shino05",

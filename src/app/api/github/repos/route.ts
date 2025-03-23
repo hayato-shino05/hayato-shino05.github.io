@@ -1,30 +1,29 @@
-import { Octokit } from "octokit";
 import { NextResponse } from "next/server";
 
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 3600;
 
 export async function GET() {
   try {
-    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-    const repos = await octokit.rest.repos.listForUser({
-      username: "hayato-shino05",
-      per_page: 100,
-      type: "owner",
-      direction: "desc",
-      sort: "pushed",
-    });
+    const response = await fetch(
+      "https://api.github.com/users/hayato-shino05/repos?sort=updated&direction=desc", 
+      {
+        headers: {
+          Accept: "application/vnd.github.v3+json",
+        },
+        next: { revalidate: 3600 },
+      }
+    );
 
-    const filteredRepos = repos.data.filter(repo => !repo.fork);
-    
-    return NextResponse.json(filteredRepos, {
-      headers: {
-        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
-      },
-    });
+    if (!response.ok) {
+      throw new Error("Failed to fetch Github repositories");
+    }
+
+    const repos = await response.json();
+    return NextResponse.json(repos);
   } catch (error) {
-    console.error("Failed to fetch GitHub repos:", error);
+    console.error("Error fetching Github repositories:", error);
     return NextResponse.json(
-      { error: "Failed to fetch GitHub repositories" },
+      { error: "Failed to fetch Github repositories" },
       { status: 500 }
     );
   }

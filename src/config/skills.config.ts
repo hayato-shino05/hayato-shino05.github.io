@@ -3,57 +3,47 @@ export const skillsConfig = [
     category: "Languages",
     technologies: [
       "JavaScript",
-      "TypeScript",
-      "GraphQL",
-      "C",
+      "Python",
       "C++",
       "C#",
       "PHP",
-      "Python"
+      "VB.NET"
     ]
   },
   {
     category: "Frameworks",
     technologies: [
+      "React",
       "Next.js",
-      "React Native",
-      "Redux",
-      "Redux Toolkit",
-      "Nest.js",
-      "NodeJS",
-      "Bootstrap",
-      "Flask"
-    ]
-  },
-  {
-    category: "Styling",
-    technologies: [
-      "Tailwind CSS",
-      "SCSS",
-      "styled-components",
-      "CSS",
-      "Headless UI",
-      "HTML"
+      "Node.js",
+      "Flask",
+      "Bootstrap"
     ]
   },
   {
     category: "Database",
     technologies: [
       "MySQL",
-      "MongoDB",
       "PostgreSQL",
       "Firebase"
+    ]
+  },
+  {
+    category: "Office & Utilities",
+    technologies: [
+      "Microsoft Office",
+      "Word",
+      "Excel",
+      "PowerPoint"
     ]
   },
   {
     category: "Tools",
     technologies: [
       "Git",
-      "Jira",
-      "Confluence",
-      "Figma",
+      "GitHub",
       "VS Code",
-      "Android Studio",
+      "Visual Studio",
       "Docker",
       "Render",
       "Photoshop"

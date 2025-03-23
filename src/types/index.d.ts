@@ -44,3 +44,13 @@ export type Experience = {
   description: string[];
   achievement?: string;
 };
+
+export type GithubRepository = {
+  name: string;
+  description: string;
+  html_url: string;
+  language: string;
+  stargazers_count: number;
+  forks: number;
+  updated_at: string;
+};

@@ -29,9 +29,7 @@ export default function Hero() {
         {portfolioConfig.tagline} <span className="sr-only">tagline</span>
       </h3>
       <p className="my-6 max-w-2xl text-foreground/80">
-      Hey there 👋 I'm a Front-End Engineer with expertise in building scalable web and mobile applications.  
-      I worked at SNAPTEC, where I led the development of SaaS themes, administrative dashboards, and e-commerce solutions, but I am currently looking for a new job.  
-      I specialize in React, Next.js, and React Native, with a strong focus on performance optimization and user experience. Notable achievements include improving GTmetrix scores to grade A and being awarded Hero of the Year 2021.
+      Hello there! I'm a passionate programming student who's always eager to learn and grow. I have experience with languages like JavaScript, Python, C++, C#, VB.NET, and PHP, as well as Web development with Node.js. I'm also skilled in Microsoft Office applications and other utilities for office tasks, MySQL and Firebase databases, and know my way around Photoshop for creative projects. I'm on the lookout for a suitable job where I can apply what I've learned and gain more hands-on experience. If you have an opportunity or an exciting project, feel free to connect with me!🚀
         <span className="sr-only">bio</span>
       </p>
       <Socials />
