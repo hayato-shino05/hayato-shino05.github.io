@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     const repos = await octokit.rest.repos.listForUser({
-      username: "MinhOmega",
+      username: "hayato-shino05",
       per_page: 100,
       type: "owner",
       direction: "desc",
