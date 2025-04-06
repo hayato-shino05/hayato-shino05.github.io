@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 3600;
+export const revalidate = 0;
 
 export async function GET() {
   try {
@@ -10,7 +10,7 @@ export async function GET() {
         headers: {
           Accept: "application/vnd.github.v3+json",
         },
-        next: { revalidate: 3600 },
+        next: { revalidate: 0 },
       }
     );
 
