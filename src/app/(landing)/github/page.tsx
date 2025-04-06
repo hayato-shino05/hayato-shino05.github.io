@@ -46,7 +46,7 @@ export default function GithubPage() {
     try {
       const response = await fetch('/api/github/repos', {
         next: {
-          revalidate: 0 // Remove cache
+          revalidate: 3600 // Cache for 1 hour
         }
       });
 
