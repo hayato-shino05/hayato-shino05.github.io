@@ -2,7 +2,7 @@ import type { Experience } from "@/types";
 
 export const experiencesConfig: Experience[] = [
   {
-    title: "Listing and Upload",
+    title: "POD Content Manager",
     employmentType: "Freelance",
     company: {
       name: "VCOMGROUP",
@@ -14,10 +14,10 @@ export const experiencesConfig: Experience[] = [
     start: "September 2024",
     end: "Present",
     description: [
-      "Listing and Upload products to Teepublic website",
-      "Listing and Upload products to Redbubble website",
-      "Lead the team to upload, training and support products to other websites",
+      "Managed the uploading and listing of products on TeePublic, ensuring high-quality presentation and platform compliance.",
+      "Oversaw content deployment on Redbubble, optimizing product visibility and engagement.",
+      "Led a team in content management, providing training and support to scale product listings across multiple platforms.",
     ],
-    achievement: "",
+    achievement: "Developed a trained team to streamline content operations and enhance productivity in Print-on-Demand workflows.",
   },
 ];
