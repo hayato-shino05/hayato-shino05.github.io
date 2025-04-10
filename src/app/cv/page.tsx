@@ -1,187 +1,277 @@
+
 "use client";
 import { TextScramble } from "@/components/text-scramble";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Fragment, useState } from "react";
 
-// CV Data
+// ========================
+// CV Data (English)
+// ========================
 const CV_DATA = {
   header: {
-    name: "VO NGOC QUANG MINH",
+    name: "VŨ ĐỨC DŨNG",
     contacts: [
-      { text: "vnqminh0502@gmail.com", href: "mailto:vnqminh0502@gmail.com" },
-      { text: "linkedin.com/in/minhvoomega", href: "https://linkedin.com/in/minhvoomega" },
-      { text: "github.com/MinhOmega", href: "https://github.com/MinhOmega" },
-      { text: "Hue", href: "#" },
-      { text: "083-555-9175", href: "tel:083-555-9175" },
+      { text: "nthdungvn@gmail.com", href: "mailto:nthdungvn@gmail.com" },
+      { text: "github.com/Hayato-shino05", href: "https://github.com/Hayato-shino05" },
+      { text: "hayato-shino05.github.io", href: "https://hayato-shino05.github.io" },
+      { text: "Hồng Vân - Thường Tín - Hà Nội", href: "#" },
+      { text: "0342796576", href: "tel:0342796576" },
     ],
   },
   experience: {
     company: {
-      name: "Company SNAPTEC VIETNAM",
-      role: "Front-end Engineer",
-      period: "Sep. '19 — Present",
+      name: "VCOMGROUP",
+      role: "POD Content Manager - Freelancer",
+      period: "11/2023 — 03/2025",
       projects: [
         {
-          name: "SaaS Theme",
+          // Sửa lại để nêu rõ cả TeePublic & Redbubble
+          name: "TeePublic & Redbubble Platforms",
           description:
-            "Developed a customizable website solution, enabling users to tailor design and functionality, including translations, icons, and more.",
-          technologies: "Javascript, NextJS, Redux, AWS (S3, Map)",
+            "Manage uploads and product listings on TeePublic and Redbubble, ensuring quality displays and compliance with platform regulations.",
+          technologies: "Content Management, Team Management",
           responsibilities: [
-            "Mentored juniors, conducted code reviews, and consulted on system improvements.",
-            "Designed dynamic components and integrated country-specific payment methods.",
-            "Enhanced performance with code splitting, lazy loading, and caching.",
-          ],
-          achievement:
-            "Achieved A scores on GTmetrix (occasionally a B score during high traffic periods), improving load speed and reducing data transfer",
-        },
-        {
-          name: "MID Dashboard",
-          description: "Admin dashboard for simplified website configurations, reducing dependency on Magento admin.",
-          technologies: "JavaScript, NextJS, Redux, AWS (S3, Map, AppSync)",
-          responsibilities: [
-            "Designed core UI components and migrated Magento functions to a new interface.",
-            "Improved UX and transitioned from REST APIs to GraphQL via AWS AppSync.",
-          ],
-        },
-        {
-          name: "PWA Magento",
-          description: "Customized an e-commerce site using Magento's PWA studio.",
-          technologies: "JavaScript, React, Redux",
-          responsibilities: [
-            "Maintained and enhanced features based on client requirements.",
-            "Researched and implemented optimizations to improve developer and user experiences.",
+            "Oversee content implementation on TeePublic, ensuring compliance and engaging product presentations.",
+            "Monitor deployments on Redbubble, optimizing visibility and user interaction.",
+            "Lead team members in content management, training, and support for expanding product lines across platforms.",
+            "Participate in the entire content creation process, from ideation to final product delivery.",
           ],
         },
       ],
     },
     freelance: [
       {
-        name: "Instasalon Freelance",
-        period: "Aug. '21 — Nov. '23",
-        description: "Developed a scheduling and management system for nail salons in the US.",
-        technologies: "TypeScript, JavaScript, React Native, Redux, Firebase",
+        name: "VI TRI - FOUNDER & DEVELOPER",
+        period: "1/10/2024 — Present",
+        description: "A.I.-INTEGRATED LEARNING MANAGEMENT SYSTEM",
+        technologies: "Python, PHP, HTML, CSS, JavaScript, Docker, Bootstrap, Git",
         responsibilities: [
-          "Designed responsive UX/UI for tablet devices based on Figma prototypes.",
-          "Added features: real-time chat, appointment scheduling, drag-and-drop, in-app purchases, and offline capabilities.",
-          "Published apps on Google Play and AppStore, resolving rejections.",
+          "Building and managing the platform",
+          "Development and implementation",
+          "System administration",
         ],
       },
       {
-        name: "Personal SaaS",
-        period: "May '24 — Present",
-        description: "E-commerce and sales management platform for SMBs.",
-        technologies: "TypeScript, Next.js, MongoDB, Prisma ORM, Redux, TailwindCSS, Docker",
+        name: "VI TRI - FOUNDER & DEVELOPER",
+        period: "28/02/2024 — 06/04/2025",
+        description: "TÌM KIẾM THÁNH LỄ HÔM NAY",
+        technologies: "React Native, Expo, TypeScript, JavaScript, Python, Firebase, Git",
         responsibilities: [
-          "Built a Next.js 14 platform with server-side rendering and static generation.",
-          "Developed responsive UI with TailwindCSS, animations, and form validation.",
+          "Building and managing the platform",
+          "Development and implementation",
+          "System administration",
+        ],
+      },
+      {
+        name: "VI TRI - FOUNDER & DEVELOPER",
+        period: "Current",
+        description: "CHATBOT AI - CÁ NHÂN HÓA",
+        technologies: "Node.js, Git, JavaScript, WebSockets, HTML, CSS",
+        responsibilities: [
+          "Building and managing the platform",
+          "Development and implementation",
+          "System administration",
+        ],
+      },
+      {
+        name: "VI TRI - DEVELOPER",
+        period: "22/02/2025 — 26/02/2025",
+        // Sửa lại phần mô tả dự án
+        description: "TRANG WEB LƯU KỶ NIỆM VÀ CHÚC MỪNG SINH NHẬT NHÓM BẠN THÂN",
+        technologies: "HTML5, CSS3, JavaScript, Vanilla.js, Web Audio API, Canvas API, LocalStorage",
+        responsibilities: [
+          "Building and managing the platform",
+          "Development and implementation",
+          "System administration",
         ],
       },
     ],
   },
   skills: [
-    { category: "Languages", items: "JavaScript, TypeScript, GraphQL" },
-    { category: "Framework", items: "NextJS, React Native, Redux, Taiwind CSS, SCSS, styled-components" },
-    { category: "Software", items: "Atlassian (Jira, Confluence), Figma, Android studio, VSCode, Git" },
+    { category: "Programming", items: "C, C#, C++, VB.NET#, Python, PHP, HTML, CSS, JavaScript" },
+    { category: "Web Development", items: "React Native, Next.js, Firebase, Bootstrap, Tailwind CSS" },
+    { category: "Tools", items: "VS Code, Git, Docker, Photoshop, Office Software" },
   ],
   education: {
-    school: "Hue University of Sciences",
-    degree: "Bachelor degree - Software Engineering",
-    period: "2016 - 2020",
+    school: "Bach Khoa College of Technology",
+    degree: "Software Applications",
+    period: "08/2023 - 08/2026",
   },
-  reward: {
-    title: "SNAPTEC - HERO OF THE YEARS",
-    date: "Aug. '21",
-  },
+  awards: [
+    {
+      title: "First Prize",
+      date: "5/11/2024",
+      description: "University-level IT Student Skills Competition, Information Technology Major 2024",
+    },
+  ],
+  // Đổi sang mô tả sở thích phù hợp với PDF
+  hobbies: [
+    "Listening to JPOP and reading books",
+    "Learning Japanese",
+    "Learning Russian",
+  ],
+  // Đổi để khớp với các hoạt động trong PDF (tiếng Anh)
+  activities: [
+    {
+      title: "Spring Festival",
+      period: "22/01/2024 — 09/03/2024",
+      organization: "Spring Water Stall",
+      description: "Participation in festival stall activities",
+    },
+    {
+      title: "Technical Support",
+      period: "03/10/2024 — 05/11/2024",
+      organization: "CTECH",
+      description: "University-level IT Student Skills Competition",
+    },
+    {
+      title: "Member",
+      period: "21/03/2025 — Present",
+      organization: "CTECH",
+      description: "Participating in the Nursery Program",
+    },
+    {
+      title: "Member",
+      period: "27/03/2025 — Present",
+      organization: "CTECH",
+      description: "Participating in Talkshow 'Nurturing Technology - Building a Digital Future'",
+    },
+  ],
 };
 
-// Add Vietnamese translation of CV_DATA
+// ========================
+// CV Data (Vietnamese)
+// ========================
 const CV_DATA_VI = {
   header: {
-    name: "VÕ NGỌC QUANG MINH",
-    contacts: CV_DATA.header.contacts, // Keep the same
+    name: "VŨ ĐỨC DŨNG",
+    contacts: CV_DATA.header.contacts, // Giữ nguyên danh sách liên hệ
   },
   experience: {
     company: {
-      name: "Công ty SNAPTEC VIỆT NAM",
-      role: "Kỹ sư Front-end",
-      period: "Tháng 9/2019 — Hiện tại",
+      name: "VCOMGROUP",
+      role: "POD Content Manager - Freelancer",
+      period: "11/2023 — 03/2025",
       projects: [
         {
-          name: "SaaS Theme",
+          name: "Nền tảng TeePublic & Redbubble",
           description:
-            "Phát triển giải pháp website tùy chỉnh, cho phép người dùng điều chỉnh thiết kế và chức năng, bao gồm bản dịch, biểu tượng, và nhiều hơn nữa.",
-          technologies: "Javascript, NextJS, Redux, AWS (S3, Map)",
+            "Quản lý việc tải lên và liệt kê sản phẩm trên TeePublic và Redbubble, đảm bảo chất lượng hiển thị và tuân thủ quy định nền tảng.",
+          technologies: "Quản lý nội dung, Quản lý nhóm",
           responsibilities: [
-            "Hướng dẫn junior, review code và tư vấn cải thiện hệ thống.",
-            "Thiết kế các component động và tích hợp phương thức thanh toán theo quốc gia.",
-            "Tăng cường hiệu suất với code splitting, lazy loading và caching.",
-          ],
-          achievement:
-            "Đạt điểm A trên GTmetrix (thỉnh thoảng điểm B trong thời điểm cao điểm), cải thiện tốc độ tải và giảm truyền dữ liệu",
-        },
-        {
-          name: "MID Dashboard",
-          description:
-            "Bảng điều khiển quản trị để đơn giản hóa cấu hình website, giảm phụ thuộc vào quản trị Magento.",
-          technologies: "JavaScript, NextJS, Redux, AWS (S3, Map, AppSync)",
-          responsibilities: [
-            "Thiết kế các thành phần UI cốt lõi và chuyển đổi các chức năng Magento sang giao diện mới.",
-            "Cải thiện UX và chuyển đổi từ REST APIs sang GraphQL thông qua AWS AppSync.",
-          ],
-        },
-        {
-          name: "PWA Magento",
-          description: "Tùy chỉnh trang thương mại điện tử sử dụng PWA studio của Magento.",
-          technologies: "JavaScript, React, Redux",
-          responsibilities: [
-            "Duy trì và nâng cao tính năng dựa trên yêu cầu của khách hàng.",
-            "Nghiên cứu và triển khai tối ưu hóa để cải thiện trải nghiệm cho nhà phát triển và người dùng.",
+            "Giám sát triển khai nội dung trên TeePublic và Redbubble, tối ưu khả năng hiển thị và trưng bày sản phẩm.",
+            "Dẫn dắt đội nhóm trong quản lý nội dung, đào tạo và hỗ trợ mở rộng danh mục trên nhiều nền tảng.",
+            "Tham gia trực tiếp vào quá trình sáng tạo nội dung từ ý tưởng đến sản phẩm cuối cùng.",
           ],
         },
       ],
     },
     freelance: [
       {
-        name: "Instasalon Freelance",
-        period: "Tháng 8/2021 — Tháng 11/2023",
-        description: "Phát triển hệ thống đặt lịch và quản lý cho các tiệm nail tại Mỹ.",
-        technologies: "TypeScript, JavaScript, React Native, Redux, Firebase",
+        name: "VI TRI - FOUNDER & DEVELOPER",
+        period: "1/10/2024 — Hiện tại",
+        description: "A.I.-INTEGRATED LEARNING MANAGEMENT SYSTEM",
+        technologies: "Python, PHP, HTML, CSS, JavaScript, Docker, Bootstrap, Git",
         responsibilities: [
-          "Thiết kế UX/UI responsive cho thiết bị tablet dựa trên prototype Figma.",
-          "Thêm tính năng: chat thời gian thực, đặt lịch hẹn, kéo thả, mua hàng trong ứng dụng và khả năng hoạt động offline.",
-          "Xuất bản ứng dụng trên Google Play và AppStore, giải quyết các vấn đề bị từ chối.",
+          "Xây dựng và quản trị hệ thống",
+          "Phát triển và triển khai",
+          "Quản lý hệ thống",
         ],
       },
       {
-        name: "Personal SaaS",
-        period: "Tháng 5/2024 — Hiện tại",
-        description: "Nền tảng thương mại điện tử và quản lý bán hàng cho doanh nghiệp vừa và nhỏ.",
-        technologies: "TypeScript, Next.js, MongoDB, Prisma ORM, Redux, TailwindCSS, Docker",
+        name: "VI TRI - FOUNDER & DEVELOPER",
+        period: "28/02/2024 — 06/04/2025",
+        description: "TÌM KIẾM THÁNH LỄ HÔM NAY",
+        technologies: "React Native, Expo, TypeScript, JavaScript, Python, Firebase, Git",
         responsibilities: [
-          "Xây dựng nền tảng Next.js 14 với server-side rendering và static generation.",
-          "Phát triển UI responsive với TailwindCSS, animation và form validation.",
+          "Xây dựng và quản trị hệ thống",
+          "Phát triển và triển khai",
+          "Quản lý hệ thống",
+        ],
+      },
+      {
+        name: "VI TRI - FOUNDER & DEVELOPER",
+        period: "Hiện tại",
+        description: "CHATBOT AI - CÁ NHÂN HÓA",
+        technologies: "Node.js, Git, JavaScript, WebSockets, HTML, CSS",
+        responsibilities: [
+          "Xây dựng và quản trị hệ thống",
+          "Phát triển và triển khai",
+          "Quản lý hệ thống",
+        ],
+      },
+      {
+        name: "VI TRI - DEVELOPER",
+        period: "22/02/2025 — 26/02/2025",
+        description: "TRANG WEB LƯU KỶ NIỆM VÀ CHÚC MỪNG SINH NHẬT NHÓM BẠN THÂN",
+        technologies: "HTML5, CSS3, JavaScript, Vanilla.js, Web Audio API, Canvas API, LocalStorage",
+        responsibilities: [
+          "Xây dựng và quản trị hệ thống",
+          "Phát triển và triển khai",
+          "Quản lý hệ thống",
         ],
       },
     ],
   },
   skills: [
-    { category: "Ngôn ngữ", items: "JavaScript, TypeScript, GraphQL" },
-    { category: "Framework", items: "NextJS, React Native, Redux, Taiwind CSS, SCSS, styled-components" },
-    { category: "Phần mềm", items: "Atlassian (Jira, Confluence), Figma, Android studio, VSCode, Git" },
+    { category: "Lập trình", items: "C, C#, C++, VB.NET#, Python, PHP, HTML, CSS, JavaScript" },
+    { category: "Phát triển Web", items: "React Native, Next.js, Firebase, Bootstrap, Tailwind CSS" },
+    { category: "Công cụ", items: "VS Code, Git, Docker, Photoshop, Tin học văn phòng" },
   ],
   education: {
-    school: "Đại học Khoa học Huế",
-    degree: "Cử nhân - Kỹ thuật Phần mềm",
-    period: "2016 - 2020",
+    school: "Cao đẳng Kỹ thuật - Công nghệ Bách Khoa",
+    degree: "Ứng dụng phần mềm",
+    period: "08/2023 - 08/2026",
   },
-  reward: {
-    title: "SNAPTEC - ANH HÙNG CỦA NĂM",
-    date: "Tháng 8/2021",
-  },
+  awards: [
+    {
+      title: "Giải Nhất",
+      date: "5/11/2024",
+      description: "Hội Thi Kỹ Năng Nghề Sinh Viên Cấp Trường Ngành CNTT năm 2024",
+    },
+  ],
+  hobbies: [
+    "Nghe nhạc JPOP và đọc sách",
+    "Học tiếng Nhật",
+    "Học tiếng Nga",
+  ],
+  activities: [
+    {
+      title: "Quầy hàng nước Mùa Xuân",
+      period: "22/01/2024 — 09/03/2024",
+      organization: "Lễ Hội Mùa Xuân",
+      description: "Tham gia tổ chức và phục vụ quầy nước",
+    },
+    {
+      title: "Hỗ trợ kỹ thuật",
+      period: "03/10/2024 — 05/11/2024",
+      organization: "CTECH",
+      description: "Hội Thi Kỹ Năng Nghề Sinh Viên Cấp Trường Ngành CNTT",
+    },
+    {
+      title: "Thành viên",
+      period: "21/03/2025 — Hiện tại",
+      organization: "CTECH",
+      description: "Tham gia Vườn Ươm",
+    },
+    {
+      title: "Thành viên",
+      period: "27/03/2025 — Hiện tại",
+      organization: "CTECH",
+      description: "Talkshow Ươm Mầm Công Nghệ - Kiến Tạo Tương Lai Số",
+    },
+  ],
 };
 
-const ProjectSection = ({ project }: { project: (typeof CV_DATA.experience.company.projects)[0] }) => (
+// ===============
+// Project Section
+// ===============
+const ProjectSection = ({
+  project,
+}: {
+  project: (typeof CV_DATA.experience.company.projects)[0];
+}) => (
   <div className="mb-4">
     <h4 className="font-semibold">Project: {project.name}</h4>
     <ul className="list-disc ml-4 md:ml-6 space-y-1" role="list">
@@ -199,16 +289,18 @@ const ProjectSection = ({ project }: { project: (typeof CV_DATA.experience.compa
           ))}
         </ul>
       </li>
-      {project.achievement && (
-        <li>
-          <span className="font-medium">Achievement:</span> {project.achievement}
-        </li>
-      )}
     </ul>
   </div>
 );
 
-const FreelanceSection = ({ project }: { project: (typeof CV_DATA.experience.freelance)[0] }) => (
+// ===============
+// Freelance Section
+// ===============
+const FreelanceSection = ({
+  project,
+}: {
+  project: (typeof CV_DATA.experience.freelance)[0];
+}) => (
   <div>
     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
       <h4 className="font-semibold">Project: {project.name}</h4>
@@ -233,18 +325,24 @@ const FreelanceSection = ({ project }: { project: (typeof CV_DATA.experience.fre
   </div>
 );
 
-// Add this before the CVPage component
+// ===============
+// Download PDF
+// ===============
 const handleDownloadPDF = () => {
-  const pdfUrl = "/files/MinhVo-CV-Software Engineering.pdf";
+  const pdfUrl = "/files/VuDucDung-CV.pdf";
   const link = document.createElement("a");
   link.href = pdfUrl;
-  link.download = "MinhVo - CV - Software Engineering.pdf";
+  link.download = "Vu Duc Dung - CV.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 };
 
+// ===============
+// Main CV Page
+// ===============
 export default function CVPage() {
+  // Mặc định để false, bạn có thể cài nút chuyển ngôn ngữ nếu muốn
   const [isVietnamese] = useState(false);
   const [triggerScramble, setTriggerScramble] = useState(false);
 
@@ -257,7 +355,10 @@ export default function CVPage() {
 
   return (
     <>
-      <article className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8" role="main">
+      <article
+        className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8"
+        role="main"
+      >
         {/* Header */}
         <header className="text-center space-y-4">
           <TextScramble
@@ -281,8 +382,14 @@ export default function CVPage() {
                 )}
                 <a
                   href={contact.href}
-                  target={contact.href.startsWith("http") ? "_blank" : undefined}
-                  rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  target={
+                    contact.href.startsWith("http") ? "_blank" : undefined
+                  }
+                  rel={
+                    contact.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="hover:text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary inline-block"
                   aria-label={`Contact via ${contact.text}`}
                 >
@@ -296,16 +403,23 @@ export default function CVPage() {
 
         {/* Work Experience */}
         <section aria-labelledby="work-experience">
-          <h2 id="work-experience" className="text-xl font-bold border-b pb-1 mb-6">
+          <h2
+            id="work-experience"
+            className="text-xl font-bold border-b pb-1 mb-6"
+          >
             Work Experience
           </h2>
           <div className="space-y-8">
             <div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
                 <h3 className="font-bold">{currentData.experience.company.name}</h3>
-                <span className="text-sm text-muted-foreground">{currentData.experience.company.period}</span>
+                <span className="text-sm text-muted-foreground">
+                  {currentData.experience.company.period}
+                </span>
               </div>
-              <div className="italic mb-4">{currentData.experience.company.role}</div>
+              <div className="italic mb-4">
+                {currentData.experience.company.role}
+              </div>
               {currentData.experience.company.projects.map((project, idx) => (
                 <ProjectSection key={idx} project={project} />
               ))}
@@ -325,7 +439,9 @@ export default function CVPage() {
           <div className="space-y-3">
             {currentData.skills.map((skill, idx) => (
               <div key={idx} className="flex flex-col sm:flex-row gap-1">
-                <span className="font-medium min-w-[100px]">{skill.category}:</span>
+                <span className="font-medium min-w-[100px]">
+                  {skill.category}:
+                </span>
                 <span>{skill.items}</span>
               </div>
             ))}
@@ -342,18 +458,62 @@ export default function CVPage() {
               <h3 className="font-bold">{currentData.education.school}</h3>
               <div className="italic">{currentData.education.degree}</div>
             </div>
-            <span className="text-sm text-muted-foreground">{currentData.education.period}</span>
+            <span className="text-sm text-muted-foreground">
+              {currentData.education.period}
+            </span>
           </div>
         </section>
 
-        {/* Reward */}
-        <section aria-labelledby="reward">
-          <h2 id="reward" className="text-xl font-bold border-b pb-1 mb-6">
-            Reward
+        {/* Awards */}
+        <section aria-labelledby="awards">
+          <h2 id="awards" className="text-xl font-bold border-b pb-1 mb-6">
+            Awards
           </h2>
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
-            <h3 className="font-bold">{currentData.reward.title}</h3>
-            <span className="text-sm text-muted-foreground">{currentData.reward.date}</span>
+          <div className="space-y-3">
+            {currentData.awards.map((award, idx) => (
+              <div key={idx} className="flex flex-col sm:flex-row gap-1">
+                <span className="font-medium min-w-[100px]">{award.title}:</span>
+                <span>
+                  {award.date} - {award.description}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Hobbies */}
+        <section aria-labelledby="hobbies">
+          <h2 id="hobbies" className="text-xl font-bold border-b pb-1 mb-6">
+            Hobbies
+          </h2>
+          <div className="space-y-3">
+            {currentData.hobbies.map((hobby, idx) => (
+              <div key={idx} className="flex flex-col sm:flex-row gap-1">
+                <span className="font-medium min-w-[100px]">{hobby}:</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Activities */}
+        <section aria-labelledby="activities">
+          <h2 id="activities" className="text-xl font-bold border-b pb-1 mb-6">
+            Activities
+          </h2>
+          <div className="space-y-3">
+            {currentData.activities.map((activity, idx) => (
+              <div key={idx} className="flex flex-col sm:flex-row gap-1">
+                <span className="font-medium min-w-[100px]">
+                  {activity.title}:
+                </span>
+                <span>
+                  {activity.period} - {activity.organization}
+                </span>
+                <span className="text-sm text-muted-foreground">
+                  {activity.description}
+                </span>
+              </div>
+            ))}
           </div>
         </section>
       </article>
@@ -367,13 +527,17 @@ export default function CVPage() {
           <Download className="mr-2 h-4 w-4" />
           Download PDF
         </Button>
-        {/* <Button
+        {/* 
+        Nếu cần nút chuyển ngôn ngữ, mở comment bên dưới:
+        
+        <Button
           onClick={handleLanguageSwitch}
           className="rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
         >
           <Languages className="mr-2 h-4 w-4" />
           {isVietnamese ? "Switch to English" : "Chuyển sang Tiếng Việt"}
-        </Button> */}
+        </Button>
+        */}
       </div>
     </>
   );

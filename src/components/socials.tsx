@@ -15,7 +15,7 @@ export const Socials = () => {
         asChild
       >
         <Link href={portfolioConfig.resume}>
-          Resume
+          CV
         </Link>
       </Button>
       {Object.keys(portfolioConfig.links).map((key: string) => {
