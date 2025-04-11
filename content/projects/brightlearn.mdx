@@ -1,76 +1,85 @@
 ---
-title: "Website Lưu Giữ Kỷ Niệm và Chúc Mừng Sinh Nhật Nhóm Bạn Thân"
-description: "Trang web tương tác vui nhộn để lưu giữ kỷ niệm và tổ chức sinh nhật nhóm bạn thân, với đếm ngược, bánh sinh nhật 3D, album ảnh, và các tính năng giải trí."
-date: "2024-12-22"
-tags: ["HTML", "CSS", "JavaScript", "Web Audio API", "Canvas API", "Local Storage"]
-links:
-  - name: "Website"
-    url: "https://hayatoshino05.onrender.com/"
-image: "./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/1.png"
+title: BrightLearn
+description: "Smart e-learning platform for high schoolers with personalized paths, AI exams, Gemini API feedback, and teacher collaboration tools"
+date: "2024-10-01"
+tags: ["PHP", "JavaScript", "Docker", "Flask", "Python","Bootstrap", "Render", "Firebase", "MySQL"]
+links: [
+  {
+    name: "Website",
+    url: "brightlearn",
+  },
+]
+image: "./assets/brightlearn/manhinh.png"
 ---
 
-import Image from 'next/image'
+## Overview
 
-# Website Lưu Giữ Kỷ Niệm và Chúc Mừng Sinh Nhật 🎂
+BrightLearn is a cutting-edge e-learning platform tailored for high school students. It leverages AI to create personalized learning paths, generate smart exams, and provide instant feedback through Google's Gemini API. With features like real-time collaboration tools and a teacher platform for sharing exam materials, BrightLearn empowers both students and educators to enhance learning outcomes effectively.
 
-<div className="my-4">
-  <Image src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/1.png" alt="Màn hình chính của website chúc mừng sinh nhật nhóm bạn thân" width={600} height={400} />
-</div>
+## UI/UX
 
-Tôi là **Vũ Đức Dũng**, và đây là **Website Lưu Giữ Kỷ Niệm và Chúc Mừng Sinh Nhật** – một dự án nhỏ tôi làm để giúp nhóm bạn thân của mình luôn nhớ và ăn mừng những ngày đặc biệt cùng nhau. Ý tưởng bắt đầu từ việc tôi thấy mọi người hay quên ngày sinh nhật, hoặc những khoảnh khắc vui vẻ cứ trôi qua mà không được lưu lại. Thế là tôi tạo ra một không gian trực tuyến vui nhộn, nơi cả nhóm có thể cùng tổ chức sinh nhật, xem lại kỷ niệm, và cười thật nhiều!
+<img
+  src="./assets/brightlearn/1.png"
+  alt="BrightLearn Demo"
+  className="w-full aspect-video"
+/>
 
-Trang web này không chỉ để chúc mừng sinh nhật, mà còn là nơi lưu giữ những ký ức đẹp của tình bạn – từ những tấm ảnh ngố tàu đến những lời chúc “cà khịa” nhưng đầy yêu thương.
+## Key Features
 
-## Các Tính Năng Chính ✨
+- E-commerce platform
+- Sales management system
+- Server-side rendering, Static page generation
+- Responsive UI with animations both user and admin side
+- Form validation system
+- Server action for communicate with database
 
-- 🎉 **Đếm ngược sinh nhật**: Hiển thị thời gian còn lại đến ngày sinh nhật tiếp theo của bất kỳ ai trong nhóm, giúp cả bọn lên kế hoạch trước.
-- 🎂 **Bánh sinh nhật tương tác**: Bánh 3 tầng lung linh với nến, bạn có thể thổi nến bằng microphone – cảm giác như thật!
-- 📸 **Album ảnh kỷ niệm**: Lưu trữ và xem lại những khoảnh khắc đáng nhớ của nhóm, từ chuyến đi chơi đến buổi tiệc sinh nhật.
-- 🎵 **Nhạc sinh nhật vui nhộn**: Phát nhạc chúc mừng sinh nhật, tạo không khí rộn ràng.
-- 🎈 **Hiệu ứng sống động**:
-  - Pháo hoa rực rỡ khi thổi tắt nến.
-  - Bóng bay bay khắp màn hình khi nhấn vào bánh sinh nhật.
-- 📱 **Chia sẻ lên mạng xã hội**: Dễ dàng đăng lời chúc hoặc ảnh kỷ niệm lên Facebook, Twitter, Instagram.
-- 🎮 **Trò chơi giải trí** (đang phát triển):
-  - Trò chơi Trí nhớ: Tìm các cặp ảnh giống nhau.
-  - Trò chơi Ghép hình: Sắp xếp lại ảnh nhóm bị xáo trộn.
+## Technical Stack
 
-<div className="my-4">
-  <Image src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/2.png" alt="Hiệu ứng bánh sinh nhật 3D với nến và pháo hoa" width={600} height={400} />
-</div>
+### Frontend
+- Next.js 14 platform
+- TailwindCSS for styling
+- TypeScript for type safety
+- Form validation libraries
+- Admin dashboard for managing products, orders, users, landing pages, etc.
 
-## Lợi Ích Của Dự Án 🌟
+### Backend & Infrastructure
+- MongoDB for database
+- Prisma ORM
+- Docker containerization
+- Server-side rendering (SSR), Static site generation (SSG)
+- [Vercel for deployment](https://scodenjnja.store/en) or [AWS EC2 with self-hosted MongoDB](https://release.scodenjnja.store/en)
 
-1. **Lưu giữ kỷ niệm mãi mãi**:
-   - Album ảnh kỹ thuật số giúp lưu lại những khoảnh khắc đẹp, từ bữa tiệc sinh nhật đến chuyến đi chơi.
-   - Dễ dàng xem lại và chia sẻ kỷ niệm bất cứ lúc nào.
-   - Tạo một “kho báu” chung để cả nhóm cùng nhìn lại sau này.
+## Implementation Details
 
-2. **Gắn kết tình bạn**:
-   - Đếm ngược sinh nhật nhắc mọi người chuẩn bị quà, lời chúc, hoặc một buổi tiệc bất ngờ.
-   - Không gian chung để cả nhóm tương tác, từ viết lời chúc đến chơi trò chơi.
-   - Giúp tình bạn thêm bền chặt qua những khoảnh khắc ý nghĩa.
+- Built a scalable Next.js platform with server-side rendering
+- Implemented static page generation for improved performance
+- Developed responsive UI using TailwindCSS
+- Created smooth animations for enhanced user experience
+- Containerized application using Docker
 
-3. **Vui vẻ và sáng tạo**:
-   - Tính năng thổi nến bằng microphone mang đến trải nghiệm độc đáo, như thật.
-   - Hiệu ứng pháo hoa, bóng bay tạo không khí tiệc tùng ngay trên màn hình.
-   - Các trò chơi tương tác (sắp ra mắt) giúp cả nhóm cười nghiêng ngả.
+## Role & Responsibilities
 
-4. **Dễ dùng, dễ chia sẻ**:
-   - Giao diện thân thiện, chỉ cần vài cú nhấp là khám phá hết mọi thứ.
-   - Chia sẻ lời chúc hoặc ảnh lên mạng xã hội chỉ trong một nốt nhạc.
-   - Hoạt động mượt mà trên cả điện thoại và máy tính.
+- Led full-stack development
+- Architected the platform structure
+- Implemented server-side rendering
+- Developed responsive UI components
+- Set up Docker containerization
+- Integrated database with Prisma ORM
+- Managed deployment and infrastructure
 
-5. **Ý nghĩa lâu dài**:
-   - Không chỉ là sinh nhật, trang web còn là nơi lưu lại hành trình của nhóm bạn.
-   - Một món quà ý nghĩa mà cả nhóm có thể cùng nhau xây dựng và sử dụng.
+## Technical Achievements
 
-## Công Nghệ Sử Dụng 💻
+- Optimized page load times through SSR and SSG
+- Improved SEO through proper meta tags and SSR
+- Enhanced user experience with responsive design
+- Implemented efficient data fetching strategies
+- Ensured type safety with TypeScript 
 
-Tôi đã dùng các công nghệ đơn giản nhưng mạnh mẽ để tạo ra trải nghiệm mượt mà:
-- **HTML5**: Xây dựng cấu trúc trang web.
-- **CSS3**: Tạo giao diện đẹp mắt, hiệu ứng mượt mà như pháo hoa và bóng bay.
-- **JavaScript**: Xử lý logic như đếm ngược, tương tác bánh sinh nhật, và trò chơi.
-- **Web Audio API**: Hỗ trợ tính năng thổi nến bằng microphone và phát nhạc.
-- **Canvas API**: Vẽ bánh sinh nhật 3D và các hiệu ứng động.
-- **Local Storage**: Lưu dữ liệu sinh nhật và ảnh để không bị mất khi tải lại trang.
+## Screenshots
+
+<br />
+<div className="flex flex-col gap-4">
+  <Image src="./assets/brightlearn/2.png" alt="BrightLearn" />
+  <Image src="./assets/brightlearn/3.png" alt="BrightLearn" />
+  <Image src="./assets/brightlearn/4.png" alt="BrightLearn" />
+</div> 
