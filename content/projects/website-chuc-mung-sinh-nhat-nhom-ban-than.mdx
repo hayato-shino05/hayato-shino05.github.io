@@ -5,105 +5,58 @@ date: "2024-12-22"
 tags: ["HTML", "CSS", "JavaScript", "Web Audio API", "Canvas API", "Local Storage"]
 links:
   - name: "Website"
-    url: "https://hayatoshino05.onrender.com"
+    url: "https://hayatoshino05.onrender.com/"
 image: "./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/1.png"
 ---
 
-## Tổng Quan
+import Image from 'next/image'
 
-Bạn đã bao giờ muốn có một nơi để cả nhóm bạn thân cùng tổ chức sinh nhật và lưu giữ những kỷ niệm đáng nhớ chưa? **Website Lưu Giữ Kỷ Niệm và Chúc Mừng Sinh Nhật** chính là nơi đó! Tôi là **Vũ Đức Dũng**, và đây là dự án tôi tạo ra để giúp nhóm bạn của mình không bao giờ quên những ngày đặc biệt, đồng thời lưu lại những khoảnh khắc vui vẻ – từ tấm ảnh “dìm hàng” đến những lời chúc đầy yêu thương.
+# Website Lưu Giữ Kỷ Niệm và Chúc Mừng Sinh Nhật Nhóm Bạn Thân 🎉
 
-Dự án này sử dụng các công nghệ web đơn giản nhưng mạnh mẽ như HTML, CSS, JavaScript, kết hợp với Web Audio API và Canvas API để mang đến trải nghiệm tương tác vui nhộn. Từ đếm ngược sinh nhật, bánh 3D lung linh, đến album ảnh kỷ niệm, website là một không gian trực tuyến để cả nhóm cùng cười, cùng nhớ, và cùng gắn bó.
+Tôi là **Vũ Đức Dũng**, và đây là dự án **Website Lưu Giữ Kỷ Niệm và Chúc Mừng Sinh Nhật** – một không gian trực tuyến tôi làm cho nhóm bạn thân để lưu lại những khoảnh khắc đẹp và tổ chức sinh nhật cùng nhau. Ý tưởng bắt đầu khi tôi thấy mọi người hay quên ngày sinh nhật, hoặc những kỷ niệm vui cứ trôi qua mà không được giữ lại. Thế nên, tôi tạo ra website này để cả nhóm có thể cười thật nhiều, xem ảnh cũ, và cùng nhau ăn mừng!
 
-<img src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/1.png" alt="Màn hình chính của website chúc mừng sinh nhật nhóm bạn thân" class="w-full aspect-video" />
-
-## UI/UX
-
-Website được thiết kế với giao diện đơn giản, thân thiện và đầy màu sắc, mang lại cảm giác như một bữa tiệc sinh nhật thực sự:
-- **Trực quan và dễ dùng**: Bố cục rõ ràng, ai cũng có thể khám phá ngay từ lần đầu.
-- **Hiệu ứng sinh động**: Pháo hoa, bóng bay, và bánh sinh nhật 3D tạo không khí vui tươi.
-- **Responsive**: Hoạt động mượt mà trên điện thoại, máy tính bảng, và máy tính.
-- **Tương tác độc đáo**: Người dùng có thể thổi nến qua microphone, mang đến trải nghiệm như thật.
-
-## Các Tính Năng Chính
-
-- **Đếm ngược sinh nhật**: Hiển thị thời gian còn lại đến ngày sinh nhật tiếp theo trong nhóm, giúp mọi người chuẩn bị trước.
-- **Bánh sinh nhật 3D**: Bánh 3 tầng lung linh với nến, hỗ trợ tương tác thổi nến bằng microphone.
-- **Album ảnh kỷ niệm**: Lưu trữ và xem lại những khoảnh khắc đẹp, từ chuyến đi chơi đến tiệc sinh nhật.
-- **Nhạc sinh nhật**: Phát nhạc chúc mừng vui nhộn, tạo không khí tiệc tùng.
-- **Hiệu ứng tương tác**:
-  - Pháo hoa rực rỡ khi thổi tắt nến.
-  - Bóng bay bay khắp màn hình khi nhấn vào bánh.
-- **Chia sẻ mạng xã hội**: Đăng lời chúc hoặc ảnh kỷ niệm lên Facebook, Twitter, Instagram.
-- **Trò chơi giải trí** (đang phát triển):
-  - Trò chơi Trí nhớ: Tìm cặp ảnh giống nhau.
-  - Trò chơi Ghép hình: Sắp xếp ảnh nhóm bị xáo trộn.
-
-<img src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/2.png" alt="Hiệu ứng bánh sinh nhật 3D với nến và pháo hoa" class="w-full aspect-video" />
-
-## Công Nghệ Sử Dụng
-
-### Frontend
-- **HTML5**: Cấu trúc nền tảng của trang web.
-- **CSS3**: Thiết kế giao diện đẹp mắt, hiệu ứng mượt mà như pháo hoa và bóng bay.
-- **JavaScript (ES6+)**: Xử lý logic tương tác, từ đếm ngược đến trò chơi.
-- **Web Audio API**: Hỗ trợ tính năng thổi nến và phát nhạc sinh nhật.
-- **Canvas API**: Vẽ bánh sinh nhật 3D và các hiệu ứng động.
-- **Local Storage**: Lưu dữ liệu sinh nhật và ảnh để không mất khi tải lại trang.
-
-### Cơ Sở Hạ Tầng
-- **Static Hosting**: Triển khai nhanh trên nền tảng như Render.
-- **GitHub**: Quản lý mã nguồn và tài liệu.
-
-## Chi Tiết Kỹ Thuật
-
-- **Đếm ngược sinh nhật**: Sử dụng JavaScript Date API để tính toán thời gian thực đến ngày sinh nhật, cập nhật giao diện mỗi giây.
-- **Bánh sinh nhật tương tác**: Kết hợp Canvas API để vẽ bánh 3D và Web Audio API để phân tích âm thanh từ microphone, kích hoạt hiệu ứng khi phát hiện “thổi”.
-- **Album ảnh**: Dùng Local Storage để lưu danh sách ảnh, hiển thị dưới dạng gallery với CSS Grid.
-- **Hiệu ứng pháo hoa và bóng bay**: Tạo hoạt ảnh bằng CSS keyframes và JavaScript để điều khiển thời gian.
-- **Chia sẻ mạng xã hội**: Tích hợp API chia sẻ của các nền tảng (Facebook, Twitter, Instagram) qua URL động.
-- **Trò chơi**: Thiết kế logic cơ bản cho Trí nhớ và Ghép hình bằng JavaScript, dự kiến hoàn thiện trong tương lai.
-
-## Thách Thức & Giải Pháp
-
-1. **Thách thức: Tính năng thổi nến bằng microphone**
-   - **Vấn đề**: Xử lý âm thanh thời gian thực khó khăn, đặc biệt trên các thiết bị yếu.
-   - **Giải pháp**: Tinh chỉnh Web Audio API để giảm độ nhạy, đảm bảo hoạt động trên cả điện thoại giá rẻ.
-
-2. **Thách thức: Tối ưu hiệu suất**
-   - **Vấn đề**: Hiệu ứng Canvas (pháo hoa, bóng bay) gây lag trên thiết bị cũ.
-   - **Giải pháp**: Giảm số lượng particle trong hiệu ứng và dùng requestAnimationFrame để tối ưu rendering.
-
-3. **Thách thức: Lưu trữ ảnh cục bộ**
-   - **Vấn đề**: Local Storage có giới hạn dung lượng, khó lưu nhiều ảnh.
-   - **Giải pháp**: Nén ảnh trước khi lưu và khuyến khích người dùng chọn ảnh dung lượng thấp.
-
-## Vai Trò & Trách Nhiệm
-
-- Thiết kế ý tưởng và tính năng cho website.
-- Xây dựng giao diện và logic tương tác bằng HTML, CSS, JavaScript.
-- Tích hợp Web Audio API và Canvas API cho các tính năng độc đáo.
-- Tối ưu hóa hiệu suất trên nhiều thiết bị.
-- Viết tài liệu hướng dẫn sử dụng và tùy chỉnh.
-- Triển khai website trên nền tảng tĩnh.
-
-## Thành Tựu Kỹ Thuật
-
-- **Tính năng thổi nến**: Tạo trải nghiệm tương tác độc đáo, hoạt động trên hầu hết thiết bị.
-- **Giao diện responsive**: Hỗ trợ mọi kích thước màn hình, từ điện thoại đến máy tính.
-- **Hiệu ứng sinh động**: Pháo hoa và bóng bay mang lại không khí tiệc tùng thực sự.
-- **Album kỷ niệm**: Lưu trữ và hiển thị ảnh mượt mà, dễ dàng chia sẻ.
-- **Khả năng mở rộng**: Thiết kế nền tảng để dễ thêm trò chơi và tính năng mới.
-
-## Ảnh Giao Diện
-
-<div class="flex flex-col gap-4">
-  <div>
-    <img src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/1.png" alt="Màn hình chính của website chúc mừng sinh nhật" class="w-full aspect-video" />
-    <p class="text-center text-sm text-gray-500">Màn hình chính với đếm ngược sinh nhật</p>
-  </div>
-  <div>
-    <img src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/2.png" alt="Bánh sinh nhật 3D với hiệu ứng pháo hoa" class="w-full aspect-video" />
-    <p class="text-center text-sm text-gray-500">Bánh sinh nhật 3D và hiệu ứng pháo hoa</p>
-  </div>
+<div className="my-4">
+  <Image src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/1.png" alt="Màn hình chính của website chúc mừng sinh nhật" width={600} height={400} />
 </div>
+
+## Đây là gì?
+
+Website không chỉ để chúc mừng sinh nhật mà còn là nơi lưu giữ tình bạn – từ những tấm ảnh ngố tàu đến lời chúc đầy yêu thương. Nó có giao diện vui nhộn, dễ dùng, và chạy mượt trên cả điện thoại lẫn máy tính.
+
+## Tính Năng Chính ✨
+
+- **Đếm ngược sinh nhật**: Xem còn bao lâu nữa đến sinh nhật ai đó trong nhóm, để chuẩn bị quà hoặc tiệc.
+- **Bánh sinh nhật 3D**: Bánh lung linh với nến, bạn có thể thổi tắt bằng microphone – y như thật!
+- **Album ảnh**: Lưu và xem lại ảnh kỷ niệm, từ chuyến đi chơi đến tiệc sinh nhật.
+- **Nhạc sinh nhật**: Phát nhạc vui nhộn để tạo không khí.
+- **Hiệu ứng**:
+  - Pháo hoa bùng nổ khi thổi nến.
+  - Bóng bay bay khắp màn hình khi nhấn vào bánh.
+- **Chia sẻ**: Đăng lời chúc hoặc ảnh lên Facebook, Twitter, Instagram.
+- **Trò chơi** (đang làm):
+  - Trí nhớ: Tìm cặp ảnh giống nhau.
+  - Ghép hình: Sắp xếp ảnh nhóm.
+
+<div className="my-4">
+  <Image src="./assets/website-chuc-mung-sinh-nhat-nhom-ban-than/2.png" alt="Bánh sinh nhật 3D với hiệu ứng pháo hoa" width={600} height={400} />
+</div>
+
+## Công Nghệ Dùng 💻
+
+Tôi dùng mấy thứ cơ bản nhưng mạnh:
+- **HTML5**: Làm cấu trúc web.
+- **CSS3**: Tạo giao diện đẹp, hiệu ứng pháo hoa, bóng bay.
+- **JavaScript**: Xử lý đếm ngược, tương tác bánh, và trò chơi.
+- **Web Audio API**: Để thổi nến và phát nhạc.
+- **Canvas API**: Vẽ bánh 3D và hiệu ứng động.
+- **Local Storage**: Lưu sinh nhật và ảnh để không mất.
+
+## Dùng Như Thế Nào? 🚀
+
+Rất dễ, chỉ cần làm theo:
+
+1. **Vào web**:
+   - Truy cập [https://hayatoshino05.onrender.com/](https://hayatoshino05.onrender.com/) bằng Chrome, Safari, hay bất kỳ trình duyệt nào.
+   - Muốn dùng offline? Tải code bằng lệnh:
+     ```bash
+     git clone https://github.com/Hayato-shino05/website-chuc-mung-sinh-nhat.git
