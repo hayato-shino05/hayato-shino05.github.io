@@ -1,0 +1,123 @@
+---
+title: Grok3
+description: "Nền tảng trò chuyện AI thông minh sử dụng Gemini API, tái hiện tính cách hài hước, sắc sảo của Grok từ xAI, với khả năng thích ứng độc đáo"
+date: "2024-10-07"
+tags: ["JavaScript", "HTML/CSS", "Webpack", "Babel", "REST API", "Gemini API", "Markdown", "LocalStorage"]
+links: [
+  {
+    name: "Website",
+    url: "https://hayato-shino05.onrender.com",
+  },
+]
+image: "./Chat-AI-Cá-Nhân-Hóa/1.png"
+---
+
+## Overview
+
+Bạn đã bao giờ trò chuyện với một AI vừa thông minh, vừa hài hước, lại có thể "đá xoáy" bạn một cách sắc sảo chưa? Grok3 chính là AI đó! Được lấy cảm hứng từ Grok của xAI, Grok3 là một ứng dụng trò chuyện AI với tính cách độc đáo: hài hước, láu lỉnh, và thích ứng với thái độ người dùng. Dự án tích hợp Google Gemini API, sử dụng system prompt phức tạp để mô phỏng phong cách của Grok, kết hợp với giao diện hiện đại hỗ trợ Markdown và syntax highlighting, mang đến trải nghiệm trò chuyện mượt mà trên mọi thiết bị.
+
+## UI/UX
+
+Grok3 mang đến trải nghiệm trò chuyện tối giản nhưng mạnh mẽ, với giao diện thân thiện, hỗ trợ chế độ sáng/tối và hiển thị nội dung phong phú qua Markdown. Người dùng có thể dễ dàng chuyển đổi theme, xem code với syntax highlighting, và lưu trữ cuộc trò chuyện cục bộ.
+
+<img
+  src="./assets/Chat-AI-Cá-Nhân-Hóa/2.png"
+  alt="Grok3 Demo"
+  class="w-full aspect-video"
+/>
+
+## Key Features
+
+- **Tính cách AI độc đáo**: Hài hước, láu lỉnh, sắc sảo, với khả năng thích ứng linh hoạt.
+- **Phong cách trò chuyện linh hoạt**: Lịch sự với người tôn trọng, châm biếm thông minh với người khiêu khích.
+- **Vibe khoa học viễn tưởng**: Thêm các tham chiếu về vũ trụ, không gian, và khám phá để tăng tính thú vị.
+- **Kỹ thuật châm biếm thông minh**: Sử dụng phóng đại, đảo ngược tình huống, và tự trào để tạo sự hài hước.
+- **Xử lý đa dạng tình huống**: Hỗ trợ 13 kịch bản trò chuyện khác nhau, từ hỏi nghiêm túc đến thách thức.
+- Chế độ sáng/tối với chuyển đổi mượt mà.
+- Hiển thị Markdown cho nội dung phong phú.
+- Syntax highlighting cho nhiều ngôn ngữ lập trình.
+- Lưu trữ cuộc trò chuyện cục bộ qua LocalStorage.
+- Giao diện đáp ứng hoàn toàn trên mọi thiết bị.
+
+## Technical Stack
+
+### Frontend
+- HTML5 và CSS3 với thiết kế responsive.
+- JavaScript ES6+ cho logic ứng dụng.
+- CSS Variables để quản lý theme sáng/tối.
+- Marked.js để xử lý Markdown.
+- Highlight.js cho syntax highlighting.
+- Font Awesome cho biểu tượng.
+- Google Fonts (Inter và Fira Code) cho typography.
+
+### Backend & Infrastructure
+- Webpack để bundling và tối ưu hóa mã nguồn.
+- Babel để chuyển đổi JavaScript (transpilation).
+- Webpack Obfuscator để bảo vệ mã nguồn.
+- Terser Plugin để nén JavaScript (minification).
+- REST API giao tiếp với Gemini API.
+- Static Hosting với hỗ trợ redirect.
+
+## Implementation Details
+
+- **System Prompt Tinh vi**: Thiết kế prompt chi tiết để định hình tính cách AI, bao gồm 13 kịch bản trò chuyện từ lịch sự đến châm biếm.
+- **Phân tích Thái độ Người dùng**: Dựa trên từ ngữ, giọng điệu, và ngữ cảnh để điều chỉnh phong cách trả lời.
+- **Châm biếm Đa dạng**: Triển khai các kỹ thuật châm biếm như phóng đại, đảo ngược tình huống, và tự trào.
+- **Giao diện Tương Tác**: Xây dựng UI với JavaScript thuần, hỗ trợ Markdown và syntax highlighting.
+- **Chuyển đổi Theme Mượt mà**: Tích hợp chế độ sáng/tối với hiệu ứng chuyển đổi liền mạch.
+- **Tích hợp API Gemini**: Xử lý lỗi và kiểm soát trạng thái khi giao tiếp với API.
+- **Quản lý Cuộc Trò chuyện**: Sử dụng LocalStorage để lưu trữ lịch sử chat dài hạn.
+
+## Challenges & Solutions
+
+- **Thách thức 1: Thiết kế System Prompt Phức tạp**
+  - **Vấn đề**: Định hình tính cách AI vừa hài hước, vừa sắc sảo, lại thích ứng với thái độ người dùng là một bài toán khó.
+  - **Giải pháp**: Phát triển system prompt chi tiết với 13 kịch bản trò chuyện, kết hợp phân tích thái độ người dùng dựa trên từ ngữ và ngữ cảnh.
+  
+- **Thách thức 2: Tích hợp API Gemini**
+  - **Vấn đề**: Xử lý lỗi API và đảm bảo phản hồi nhanh chóng trong các tình huống khác nhau.
+  - **Giải pháp**: Triển khai cơ chế retry và fallback, đồng thời tối ưu hóa thời gian phản hồi qua caching cục bộ.
+
+- **Thách thức 3: Tối ưu Hiệu suất**
+  - **Vấn đề**: Bundle size lớn do tích hợp nhiều thư viện (Marked.js, Highlight.js).
+  - **Giải pháp**: Sử dụng Webpack và Terser để nén mã, kết hợp tree-shaking để loại bỏ mã không cần thiết.
+
+## Role & Responsibilities
+
+- Thiết kế system prompt để định hình tính cách AI.
+- Xây dựng cơ chế phân tích thái độ người dùng.
+- Triển khai các kỹ thuật châm biếm thông minh.
+- Phát triển toàn bộ front-end và tích hợp API.
+- Thiết kế giao diện người dùng đáp ứng.
+- Tối ưu hóa hiệu suất ứng dụng.
+- Bảo mật mã nguồn với JavaScript obfuscation.
+
+## Technical Achievements
+
+- **Tính cách AI Độc đáo**: Tạo AI có khả năng thích ứng với thái độ người dùng, từ lịch sự đến châm biếm sắc sảo.
+- **System Prompt Tinh vi**: Hướng dẫn chi tiết cho AI xử lý 13 tình huống trò chuyện khác nhau.
+- **Cá tính Nhất quán**: Duy trì phong cách hài hước, sắc sảo của Grok qua mọi tương tác.
+- Giao diện mượt mà trên cả desktop và mobile.
+- Hiển thị Markdown đầy đủ tính năng với syntax highlighting.
+- Tối ưu hóa bundle size qua minification và tree-shaking.
+- Trải nghiệm chat AI liền mạch với system prompt tùy chỉnh.
+
+## Screenshots
+
+<div class="flex flex-col gap-4">
+  <div>
+    <img src="./assets/Chat-AI-Cá-Nhân-Hóa/1.png" alt="Grok3 Dark Mode" class="w-full aspect-video" />
+    <p class="text-center text-sm text-gray-500">Chế độ tối với giao diện tối ưu cho mắt</p>
+  </div>
+  <div>
+    <img src="./assets/Chat-AI-Cá-Nhân-Hóa/2.png" alt="Grok3 Code Highlighting" class="w-full aspect-video" />
+    <p class="text-center text-sm text-gray-500">Hiển thị code với syntax highlighting</p>
+  </div>
+  <div>
+    <img src="./assets/Chat-AI-Cá-Nhân-Hóa/3.png" alt="Grok3 Mobile View" class="w-full aspect-video" />
+    <p class="text-center text-sm text-gray-500">Giao diện responsive trên thiết bị di động</p>
+  </div>
+    <img src="./assets/Chat-AI-Cá-Nhân-Hóa/4.png" alt="Grok3 Mobile View" class="w-full aspect-video" />
+    <p class="text-center text-sm text-gray-500">Giao diện responsive trên thiết bị di động</p>
+  </div>
+</div>
