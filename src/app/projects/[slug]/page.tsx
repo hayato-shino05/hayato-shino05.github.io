@@ -15,7 +15,7 @@ type ProjectPageProps = {
 };
 
 async function getProjectFromParam(params: { slug: string }) {
-  const slug = params.slug;
+  const slug = (await params).slug;
   const project = projects.find((project) => project.slugAsParams === slug);
 
   if (!project) {
