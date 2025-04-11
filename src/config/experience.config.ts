@@ -11,7 +11,7 @@ export const experiencesConfig: Experience[] = [
     location: {
       name: "On-site",
     },
-    start: "September 2024",
+    start: "01/11/2023",
     end: "Present",
     description: [
       "Managed the uploading and listing of products on TeePublic, ensuring high-quality presentation and platform compliance.",
