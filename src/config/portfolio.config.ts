@@ -1,7 +1,7 @@
 import type { Portfolio } from "@/types";
 
 export const portfolioConfig: Portfolio = {
-  name: "Shinomura Hayato",
+  name: "Shinohara Hayato",
   tagline: "Passionate programming student exploring new technologies 🚀",
   resume: "/cv",
   links: {

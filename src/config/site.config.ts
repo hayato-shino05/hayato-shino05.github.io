@@ -1,12 +1,12 @@
 import { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
-  name: "Shinomura Hayato",
-  title: "Shinomura Hayato | Programming Student",
+  name: "Shinohara Hayato",
+  title: "Shinohara Hayato | Programming Student",
   description: "Hello there! I'm a passionate programming student who's always eager to learn and grow. I have experience with languages like JavaScript, Python, C++, C#, VB.NET, and PHP, as well as web development with React and Node.js. I'm also skilled in Microsoft Office applications for office tasks.",
   origin: "https://brightlearn.onrender.com",
   keywords: [
-    "Shinomura Hayato",
+    "Shinohara Hayato",
     "Programming Student",
     "Web Development",
     "JavaScript",
@@ -38,7 +38,7 @@ export const siteConfig: SiteConfig = {
   ],
   og: "https://brightlearn.onrender.com/og.png",
   creator: {
-    name: "Shinomura Hayato",
+    name: "Shinohara Hayato",
     url: "https://brightlearn.onrender.com",
   },
   socials: {
